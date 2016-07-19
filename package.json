@@ -7,7 +7,7 @@
     "license": "MIT",
     "icon": "icon.png",
     "bugs": {
-        "url": "https://gitlab.com/michele-jr-melluso/code-beautifier/issues",
+        "url": "https://github.com/tierratelematics/code-beautifier/issues",
         "email": "michele.jr.melluso@gmail.com"
     },
     "engines": {
