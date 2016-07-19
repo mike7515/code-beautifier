@@ -21,12 +21,10 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "beautify.format",
-                "title": "Beautify Code"
-            }
-        ]
+        "commands": [{
+            "command": "beautify.format",
+            "title": "Beautify Code"
+        }]
     },
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
@@ -34,12 +32,11 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "dependencies": {
-        "js-beautify": "^1.6.3",
-        "standard-format": "^2.2.2"
+        "js-beautify": "^1.6.3"
     },
     "devDependencies": {
         "typescript": "^1.8.10",
-        "vscode": "^0.11.13",
+        "vscode": "^0.11.14",
         "assert": "^1.4.1"
     }
 }

@@ -1,12 +1,19 @@
 import * as vscode from 'vscode';
-import jsbeautify = require("js-beautify");
-import standardFormat = require("standard-format");
+import * as jsbeautify from 'js-beautify';
 const tabSize = vscode.workspace.getConfiguration('editor').get("tabSize", 4);
 const LANGUAGES: string[] = ['javascript', 'json', 'scss', 'sass', 'css', 'html'];
+import {pippo2} from './pippo'
+
+export function activate(context: vscode.ExtensionContext) {
+  context.subscriptions.push(vscode.commands.registerCommand('beautify.format', () => {
+    if (LANGUAGES.indexOf(vscode.window.activeTextEditor.document.languageId) != -1) formatter()
+    else vscode.commands.executeCommand('editor.action.format')
+  }));
+}
 
 function formatCode(documentContent: String, languageId, options) {
 
-  var formatFunc = null;
+  let formatFunc = null;
 
   switch (languageId) {
     case 'css':
@@ -14,11 +21,9 @@ function formatCode(documentContent: String, languageId, options) {
     case 'scss':
       formatFunc = jsbeautify.css;
       break;
+    case 'javascript':
     case 'json':
       formatFunc = jsbeautify.js;
-      break;
-    case 'javascript':
-      formatFunc = standardFormat.transform;
       break;
     case 'html':
       formatFunc = jsbeautify.html;
@@ -60,11 +65,4 @@ function formatter() {
     });
   }
   return formatted;
-}
-
-export function activate(context: vscode.ExtensionContext) {
-  context.subscriptions.push(vscode.commands.registerCommand('beautify.format', () => {
-    if (LANGUAGES.indexOf(vscode.window.activeTextEditor.document.languageId) != -1) formatter()
-    else vscode.commands.executeCommand('editor.action.format')
-  }));
 }
