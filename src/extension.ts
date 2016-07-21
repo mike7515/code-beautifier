@@ -2,7 +2,6 @@ import * as vscode from 'vscode';
 import * as jsbeautify from 'js-beautify';
 const tabSize = vscode.workspace.getConfiguration('editor').get("tabSize", 4);
 const LANGUAGES: string[] = ['javascript', 'json', 'scss', 'sass', 'css', 'html'];
-import {pippo2} from './pippo'
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(vscode.commands.registerCommand('beautify.format', () => {
