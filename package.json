@@ -21,10 +21,33 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "beautify.format",
-            "title": "Beautify Code"
-        }]
+        "configuration": {
+            "type": "object",
+            "title": "Code Beautify Configuration",
+            "properties": {
+                "beautify.languages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "javascript",
+                        "json",
+                        "scss",
+                        "sass",
+                        "css",
+                        "html"
+                    ],
+                    "description": "Language to beautify"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "beautify.format",
+                "title": "Beautify Code"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
@@ -32,11 +55,11 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "dependencies": {
-        "js-beautify": "^1.6.3"
+        "js-beautify": "^1.6.4"
     },
     "devDependencies": {
         "typescript": "^1.8.10",
-        "vscode": "^0.11.14",
+        "vscode": "^0.11.18",
         "assert": "^1.4.1"
     }
 }
