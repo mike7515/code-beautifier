@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.3.0]
+> 2016-09-21
+- Add languages configuration
+
 ## [1.1.0]
 > 2016-07-01
 - Remove Format Shortcut
