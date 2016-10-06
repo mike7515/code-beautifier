@@ -1,11 +1,11 @@
 {
-  "files.exclude": {
-    "out": false
-  },
-  "search.exclude": {
-    "out": true
-  },
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "sasslint.configFile": ".vscode/sass-lint.yml",
-  "tslint.configFile": ".vscode/tslint.json"
+    "files.exclude": {
+        "out": false
+    },
+    "search.exclude": {
+        "out": true
+    },
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "sasslint.configFile": ".vscode/sass-lint.yml",
+    "tslint.configFile": ".vscode/tslint.json"
 }

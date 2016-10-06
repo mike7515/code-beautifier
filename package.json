@@ -1,7 +1,7 @@
 {
     "name": "code-beautifier",
-    "displayName": "Code Beautifier",
-    "description": "Beautify html, js, css, sass and less code (extension for Visual Studio Code)",
+    "displayName": "CSS, SASS and LESS Code Beautifier",
+    "description": "Beautify CSS, SASS and LESS code (extension for Visual Studio Code)",
     "version": "1.3.0",
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
@@ -11,7 +11,7 @@
         "email": "michele.jr.melluso@gmail.com"
     },
     "engines": {
-        "vscode": "^1.0.0"
+        "vscode": "^1.5.0"
     },
     "categories": [
         "Languages"
@@ -21,45 +21,26 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "configuration": {
-            "type": "object",
-            "title": "Code Beautify Configuration",
-            "properties": {
-                "beautify.languages": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "default": [
-                        "javascript",
-                        "json",
-                        "scss",
-                        "sass",
-                        "css",
-                        "html"
-                    ],
-                    "description": "Language to beautify"
-                }
-            }
-        },
         "commands": [
             {
                 "command": "beautify.format",
-                "title": "Beautify Code"
+                "title": "Beautify this code"
             }
         ]
     },
     "scripts": {
-        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "dependencies": {
         "js-beautify": "^1.6.4"
     },
     "devDependencies": {
-        "typescript": "^1.8.10",
-        "vscode": "^0.11.18",
-        "assert": "^1.4.1"
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^3.1.0",
+        "@types/node": "^6.0.45",
+        "@types/mocha": "^2.2.32"
     }
 }
