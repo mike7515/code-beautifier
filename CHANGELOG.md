@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.4.0]
+> 2016-10-06
+- Beautify only css/sass and less code
+
 ## [1.3.0]
 > 2016-09-21
 - Add languages configuration
