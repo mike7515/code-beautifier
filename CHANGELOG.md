@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.4.2]
+> 2016-11-07
+- Change Extension's display name
+
 ## [1.4.0]
 > 2016-10-06
 - Beautify only css/sass and less code

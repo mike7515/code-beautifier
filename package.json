@@ -1,7 +1,7 @@
 {
     "name": "code-beautifier",
-    "displayName": "CSS, SASS and LESS Code Beautifier",
-    "description": "Beautify CSS, SASS and LESS code (extension for Visual Studio Code)",
+    "displayName": "Beautify css/sass/scss/less",
+    "description": "Beautify css, sass and less code (extension for Visual Studio Code)",
     "version": "1.4.1",
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
