@@ -2,7 +2,7 @@
     "name": "code-beautifier",
     "displayName": "Beautify css/sass/scss/less",
     "description": "Beautify css, sass and less code (extension for Visual Studio Code)",
-    "version": "1.5.2",
+    "version": "1.6.0",
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
     "icon": "icon.png",
@@ -21,6 +21,17 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Beautify css/sass/scss/less",
+            "properties": {
+                "beautify.tabSize": {
+                    "type": "number",
+                    "default": 4,
+                    "description": "Tab Size"
+                }
+            }
+        },
         "commands": [
             {
                 "command": "beautify.format",
