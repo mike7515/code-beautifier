@@ -2,12 +2,12 @@ import * as vscode from 'vscode';
 import * as jsbeautify from 'js-beautify';
 
 export default class Beautifier {
-    public static beautify(activeEditor: vscode.TextEditor, options?) {
-        let range;
+    public static beautify(document: vscode.TextDocument, range?: vscode.Range, options?): any {
+        let activeEditor = vscode.window.activeTextEditor;
+
         if (!activeEditor) {
             return;
         }
-        let document = activeEditor.document;
 
         if (range === null) {
             var start = new vscode.Position(0, 0);
