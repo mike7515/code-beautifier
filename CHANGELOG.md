@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.6.0]
+> 2016-11-07
+- Add tabSize to beautify settings
+
 ## [1.5.0]
 > 2016-11-07
 - Use formatter integration API
