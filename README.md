@@ -11,6 +11,10 @@ If you beautify other languages ​​the code/text will be beautified to Visual
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.6.1]
+> 2016-11-08
+- Change command title
+
 ## [1.6.0]
 > 2016-11-07
 - Add tabSize to beautify settings
