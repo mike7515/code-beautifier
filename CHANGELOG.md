@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.6.2]
+> 2016-11-24
+- Minor fix
+
 ## [1.6.1]
 > 2016-11-08
 - Change command title
