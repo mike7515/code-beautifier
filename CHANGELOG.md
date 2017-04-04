@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [1.7.1]
+## [1.7.2]
 > 2017-04-04
 - Update CHANGELOG and README
 
