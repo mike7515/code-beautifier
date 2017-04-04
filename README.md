@@ -10,4 +10,5 @@ If you beautify other languages ​​the code/text will be beautified to Visual
 
 #### Options:
 > beautify.tabSize (Tab size to indent the code)
-> beautify.options (Beautifier options: https://github.com/beautify-web/js-beautify)
+
+> beautify.options (Beautifier options: https://github.com/beautify-web/js-beautify#css--html)
