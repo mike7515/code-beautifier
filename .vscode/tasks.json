@@ -1,6 +1,6 @@
 {
     "version": "0.1.0",
-    "command": "tsc",
+    "command": "./node_modules/typescript/bin/tsc",
     "isShellCommand": true,
     "args": [
         "-p",
