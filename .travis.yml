@@ -1,6 +1,6 @@
 env:  
   global:
-    secure: [VS_TOKEN=ycecewstjohavhwstoe5abq75gkjr7efp4ehzvwijzsbvfcxf3pq]
+    secure: [VS_TOKEN="ycecewstjohavhwstoe5abq75gkjr7efp4ehzvwijzsbvfcxf3pq"]
 
 after_success:  
 - npm install -g vsce;
