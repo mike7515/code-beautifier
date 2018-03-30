@@ -3,6 +3,10 @@
     "displayName": "Beautify css/sass/scss/less",
     "description": "Beautify css, sass and less code (extension for Visual Studio Code)",
     "version": "2.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tierratelematics/code-beautifier.git"
+    },
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
     "icon": "icon.png",
