@@ -13,8 +13,9 @@ before_deploy:
 - npm install -g vsce;
 - vsce package;
 deploy:
-  matrix:
   - provider: releases
+    api_key:
+      secure: KrjLbX/jycxcQuxK37WxWV6/FGKGNuIbULI408Zy2vmuFuQ29PG10cg4ZuSpUl8eovYbaAaaGZM9Nfn1mNBq2fzb4m5oWlChXwC7dwv0C3vc1bJgHaV36wFBvWkfbeQ/w4xJ1KTi531NWOPpSyXvN2JPmxFBC9pxNvydbMFgJx9gzPnSNCb1/SSbCP+FV+hRkAYyNQOQtc/Tih8d6mHCiqEbUz/jm7ascS6GB/mK9awSWHCNQdrbGTanjcejXsPS6QDez5+BqsnjCNiMoh4CPvPdDu+GTinFYvOUq6g3t3As8W1kLhpy4TpHT5LUnAatblZPdaKlqV3WT0RzQYsuoDdyYPLWHQP9d4waXulDCoLTRjE+CBJmUXglVkWj2zHxXF7diuW+AA4jmDporDcX0yEj0BOI0qM0ZWS5NFzguv21oF5ynNxtldB9jX56s+3imf1YRs/F7KLWQieSeYVCbFtMR7THoMtwNKLIqnVYS7wF33yx1hGe0JRbiI33KZ2HZtv3Jekrf3Hxh2Bmp1WqAGoBh6oVcNUtd15jHzRki7BXJZD4JHzUu+ncIjIw1TegYzxbxEnQtqoml+cLDAoVM9plXh2xDorJlLuecXz6YBw4S6+CRLOBsVshj7gvKcLoEw+Rm5b11bv9m1UbabSZvvjEdMv5uLvyBOkKHRsg52I=
     file_glob: true
     file: "*.vsix"
     skip_cleanup: true
@@ -27,5 +28,3 @@ deploy:
     on:
       repo: tierratelematics/code-beautifier
       tags: true
-  api_key:
-    secure: KrjLbX/jycxcQuxK37WxWV6/FGKGNuIbULI408Zy2vmuFuQ29PG10cg4ZuSpUl8eovYbaAaaGZM9Nfn1mNBq2fzb4m5oWlChXwC7dwv0C3vc1bJgHaV36wFBvWkfbeQ/w4xJ1KTi531NWOPpSyXvN2JPmxFBC9pxNvydbMFgJx9gzPnSNCb1/SSbCP+FV+hRkAYyNQOQtc/Tih8d6mHCiqEbUz/jm7ascS6GB/mK9awSWHCNQdrbGTanjcejXsPS6QDez5+BqsnjCNiMoh4CPvPdDu+GTinFYvOUq6g3t3As8W1kLhpy4TpHT5LUnAatblZPdaKlqV3WT0RzQYsuoDdyYPLWHQP9d4waXulDCoLTRjE+CBJmUXglVkWj2zHxXF7diuW+AA4jmDporDcX0yEj0BOI0qM0ZWS5NFzguv21oF5ynNxtldB9jX56s+3imf1YRs/F7KLWQieSeYVCbFtMR7THoMtwNKLIqnVYS7wF33yx1hGe0JRbiI33KZ2HZtv3Jekrf3Hxh2Bmp1WqAGoBh6oVcNUtd15jHzRki7BXJZD4JHzUu+ncIjIw1TegYzxbxEnQtqoml+cLDAoVM9plXh2xDorJlLuecXz6YBw4S6+CRLOBsVshj7gvKcLoEw+Rm5b11bv9m1UbabSZvvjEdMv5uLvyBOkKHRsg52I=
