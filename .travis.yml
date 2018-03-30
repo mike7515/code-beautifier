@@ -13,8 +13,7 @@ env:
     secure: "ycecewstjohavhwstoe5abq75gkjr7efp4ehzvwijzsbvfcxf3pq"
 
 script:
-- npm run build
-- npm test --silent;
+- npm run compile
 
 before_deploy:
 - npm install -g vsce;
@@ -22,8 +21,6 @@ before_deploy:
 
 deploy:
 - provider: releases
-  api_key:
-    secure: MuoJdxOHoFt43jihFBrC/w8mfL21JNxWupc+ziR0d4Bq5WAQ+wYvjHR5tXDmdNywf77enH8XUu+XQLgQN8ofTQgn2CbyAkGtImgabv14FIe8YorQ3ynpW5i9TzUg3ax+3CR8d64ggQFWwwag+UcUrprcgjqPVQR+DlQRcv0/nky+Mrt1He9QSSJg7Q9+UN+GqjCJw6kFDyhzFrONSctfAjhuP6FBtaE3t6bEMZVKenw1J4e3yXT+vK0tPEUfHN/qjT2pKOL+OdcyY21DYnZCRML5Sxcwda9M3b5+hM8MAB5x/o6RtghOUN3sZZ0IkjpT5JYtjihRUS/8AF3Fu9or7lwK8yePaB9UHrJVnoWOrp3NFng2PD9PijAu9m4dOEcnpk+2ZFn3YrGFeeHAUnUjR6ajO1+YkYRFtb59mfRQsWWfKA9ihJhBvZj7geS1vgQpWOssWw/v3vFOFD+9M4rY2f+AAWp3ZfxecqDNjQ9MArBoR8OiGdCR0ZziGcXtLRJ29C5hRnqJDLWJg64L+dIqrnBTo0/gOZhPRPPpuVrQ7iwsn9o5marEXYQ4dxAhqSetNMIhi6QXoXzvy4BkWWPSX85r92U3JJAszZVi8xLcDcTOybIGVYm7UpIMDv3Q8uPDkz5G/k8d1cDfInNF6R0qptokvXOr/NF52P7XzXxsGX4=
   file_glob: true
   file: "*.vsix"
   skip_cleanup: true
