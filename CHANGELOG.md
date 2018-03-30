@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## [1.7.2]
+> 2018-03-30
+- Fix issues
+
+## [1.7.2]
 > 2017-04-04
 - Update CHANGELOG and README
 
