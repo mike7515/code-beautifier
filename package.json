@@ -2,7 +2,7 @@
     "name": "code-beautifier",
     "displayName": "Beautify css/sass/scss/less",
     "description": "Beautify css, sass and less code (extension for Visual Studio Code)",
-    "version": "1.6.2",
+    "version": "1.7.2",
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
     "icon": "icon.png",
@@ -50,14 +50,14 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "dependencies": {
-        "js-beautify": "^1.6.4"
+        "js-beautify": "^1.6.12"
     },
     "devDependencies": {
-        "typescript": "^2.0.10",
-        "vscode": "^1.0.3",
-        "mocha": "^3.1.2",
-        "@types/node": "^6.0.51",
-        "@types/mocha": "^2.2.33",
-        "@types/js-beautify": "^0.0.28"
+        "typescript": "^2.2.2",
+        "vscode": "^1.1.0",
+        "mocha": "^3.2.0",
+        "@types/node": "^7.0.12",
+        "@types/mocha": "^2.2.40",
+        "@types/js-beautify": "^0.0.29"
     }
 }

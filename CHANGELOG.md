@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.7.2]
+> 2017-04-04
+- Update CHANGELOG and README
+
+## [1.7.0]
+> 2017-04-04
+- Update "js-beautify" library. Fixed "CSS Preserve Newlines" https://github.com/beautify-web/js-beautify/issues/537
+
 ## [1.6.2]
 > 2016-11-24
 - Minor fix
