@@ -2,7 +2,7 @@ import * as jsbeautify from "js-beautify";
 import * as vscode from "vscode";
 
 const tabSize = vscode.workspace.getConfiguration('beautify').get<number>("tabSize");
-const options = vscode.workspace.getConfiguration('beautify').get<number>("options");
+const options = vscode.workspace.getConfiguration('beautify').get<Object>("options");
 
 export default class Beautifier {
     public static beautify(document: vscode.TextDocument, range?: vscode.Range): any {
