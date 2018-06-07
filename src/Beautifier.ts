@@ -1,7 +1,7 @@
 import * as jsbeautify from "js-beautify";
 import * as vscode from "vscode";
 
-const tabSize = vscode.workspace.getConfiguration('beautify').get<number>("tabSize");
+const tabSize = vscode.workspace.getConfiguration('beautify').get<number>("tabSize") || vscode.workspace.getConfiguration('editor', null).get<number>("tabSize");
 const options = vscode.workspace.getConfiguration('beautify').get<Object>("options");
 
 export default class Beautifier {

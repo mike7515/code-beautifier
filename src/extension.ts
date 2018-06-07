@@ -17,13 +17,13 @@ export function activate(context: vscode.ExtensionContext) {
         }
     }));
 
-    function registerDocType(type) {
-        context.subscriptions.push(vscode.languages.registerDocumentFormattingEditProvider(type, {
+    function registerDocType(language) {
+        context.subscriptions.push(vscode.languages.registerDocumentFormattingEditProvider({ scheme: 'file', language: language }, {
             provideDocumentFormattingEdits: (document, options, token) => {
                 return Beautifier.beautify(vscode.window.activeTextEditor.document);
             }
         }));
-        context.subscriptions.push(vscode.languages.registerDocumentRangeFormattingEditProvider(type, {
+        context.subscriptions.push(vscode.languages.registerDocumentRangeFormattingEditProvider({ scheme: 'file', language: language }, {
             provideDocumentRangeFormattingEdits: (document, range, options, token) => {
                 var start = new vscode.Position(0, 0);
                 var end = new vscode.Position(document.lineCount - 1, document.lineAt(document.lineCount - 1).text.length);
