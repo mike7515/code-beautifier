@@ -6,7 +6,7 @@ node_js:
 - 8
 env:
   global:
-    secure: ycecewstjohavhwstoe5abq75gkjr7efp4ehzvwijzsbvfcxf3pq
+    secure: kbgcyob44okw2s7hhoj2zgb57vxkkrx2xtvsuvoqd2z2lxa3wlya
 script:
 - npm run compile
 before_deploy:
@@ -20,11 +20,11 @@ deploy:
     file: "*.vsix"
     skip_cleanup: true
     on:
-      repo: tierratelematics/code-beautifier
+      repo: mike7515/code-beautifier
       tags: true
   - provider: script
     script: vsce publish -p $VS_TOKEN
     skip_cleanup: true
     on:
-      repo: tierratelematics/code-beautifier
+      repo: mike7515/code-beautifier
       tags: true
