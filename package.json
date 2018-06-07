@@ -5,13 +5,13 @@
     "version": "2.0.3",
     "repository": {
         "type": "git",
-        "url": "git@github.com:tierratelematics/code-beautifier.git"
+        "url": "git@github.com:mike7515/code-beautifier.git"
     },
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
     "icon": "icon.png",
     "bugs": {
-        "url": "https://github.com/tierratelematics/code-beautifier/issues",
+        "url": "https://github.com/mike7515/code-beautifier/issues",
         "email": "michele.jr.melluso@gmail.com"
     },
     "engines": {

@@ -20,11 +20,11 @@ deploy:
     file: "*.vsix"
     skip_cleanup: true
     on:
-      repo: tierratelematics/code-beautifier
+      repo: mike7515/code-beautifier
       tags: true
   - provider: script
     script: vsce publish -p $VS_TOKEN
     skip_cleanup: true
     on:
-      repo: tierratelematics/code-beautifier
+      repo: mike7515/code-beautifier
       tags: true
