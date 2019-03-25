@@ -1,29 +1,13 @@
-sudo: false
-os:
-- linux
 language: node_js
 node_js:
-- 8
-env:
-  global:
-    secure: kbgcyob44okw2s7hhoj2zgb57vxkkrx2xtvsuvoqd2z2lxa3wlya
-script:
-- npm run compile
-before_deploy:
-- npm install -g vsce;
-- vsce package;
+  - "6"
+install:
+  - npm install
+  - npm install -g vsce
 deploy:
-  - provider: releases
-    api_key:
-      secure: KrjLbX/jycxcQuxK37WxWV6/FGKGNuIbULI408Zy2vmuFuQ29PG10cg4ZuSpUl8eovYbaAaaGZM9Nfn1mNBq2fzb4m5oWlChXwC7dwv0C3vc1bJgHaV36wFBvWkfbeQ/w4xJ1KTi531NWOPpSyXvN2JPmxFBC9pxNvydbMFgJx9gzPnSNCb1/SSbCP+FV+hRkAYyNQOQtc/Tih8d6mHCiqEbUz/jm7ascS6GB/mK9awSWHCNQdrbGTanjcejXsPS6QDez5+BqsnjCNiMoh4CPvPdDu+GTinFYvOUq6g3t3As8W1kLhpy4TpHT5LUnAatblZPdaKlqV3WT0RzQYsuoDdyYPLWHQP9d4waXulDCoLTRjE+CBJmUXglVkWj2zHxXF7diuW+AA4jmDporDcX0yEj0BOI0qM0ZWS5NFzguv21oF5ynNxtldB9jX56s+3imf1YRs/F7KLWQieSeYVCbFtMR7THoMtwNKLIqnVYS7wF33yx1hGe0JRbiI33KZ2HZtv3Jekrf3Hxh2Bmp1WqAGoBh6oVcNUtd15jHzRki7BXJZD4JHzUu+ncIjIw1TegYzxbxEnQtqoml+cLDAoVM9plXh2xDorJlLuecXz6YBw4S6+CRLOBsVshj7gvKcLoEw+Rm5b11bv9m1UbabSZvvjEdMv5uLvyBOkKHRsg52I=
-    file_glob: true
-    file: "*.vsix"
-    skip_cleanup: true
-    on:
-      repo: mike7515/code-beautifier
-      tags: true
   - provider: script
-    script: vsce publish -p $VS_TOKEN
+    script:
+      secure: "LwfqA9ntQ9agRREW4Ri+r6igh3zZlw7LZPykV7U8r95UPTeBrYdtBfIJLjvesMhycJPydt1aXN3eYfVzT1UgaD5nWWHjD4V32lsX9nIG3S/eoKgUWxjWI9tzMki0UGf60kmGdVCXKPYpedAG8HSRTm0pc+x97VPs8ramzR+U9sVPipwz4H3U0bIwyj6dnd+0AHt8erY0rnEON9LAzLZ4YmeH3oqdFTp79e4YIVxHo33p76/0cZEv7a7vjv++eRbml3xP2M4KsYxzBODfQz0Ov15JRNg5UXZMPPj+FjwHloc3iDLdaktHGqrk+oRMydH6Zkn+7zDSaCKFXXybkerzWbHidaq2MCWHcCTutYcMAC9dwUwJ8JQ7rvOS0srEDUpr9+qekyMLmM8J+pT5pWHKplY5nF71YARkYeiRp7TL84JsHiImCEyu9+xzq5mcMD39yRbJOSBMuxpmn3vk+mxCX3t6lr4DSGs1DY49K+ug1bbsy0Xhg4QqQvxsXKuluKI/VkmRWHTVIZ5L5Yc1yYV6NrWa+WEuVpkpjE/mBsDkFonS0kkFsYNIomQRAcFBAr84jasFqXAqfiz9KTdaO+rKGXTqesUp531XvFC/bu3q5QKYUUrk8EHPGL+RkpGb0zcReLpL6t48yYIsw4Cc3nzh9P/ZfXOhNujwWTCMN302Oxo="
     skip_cleanup: true
     on:
       repo: mike7515/code-beautifier
