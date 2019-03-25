@@ -2,7 +2,7 @@
     "name": "code-beautifier",
     "displayName": "Beautify css/sass/scss/less",
     "description": "Beautify css, sass and less code (extension for Visual Studio Code)",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "repository": {
         "type": "git",
         "url": "git@github.com:mike7515/code-beautifier.git"
