@@ -5,7 +5,7 @@
     "version": "2.2.1",
     "repository": {
         "type": "git",
-        "url": "git@github.com:mike7515/code-beautifier.git"
+        "url": "https://github.com/mike7515/code-beautifier.git"
     },
     "publisher": "michelemelluso",
     "license": "Apache-2.0",
