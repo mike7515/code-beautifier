@@ -1,8 +1,8 @@
 import * as jsbeautify from "js-beautify";
 import * as vscode from "vscode";
 
-const tabSize = vscode.workspace.getConfiguration('beautify').get<number>("tabSize") || vscode.workspace.getConfiguration('editor', null).get<number>("tabSize");
-const options = vscode.workspace.getConfiguration('beautify').get<Object>("options");
+const DEFAULT_TAB_SIZE = vscode.workspace.getConfiguration('editor', null).get<number>("tabSize");
+const OPTIONS = vscode.workspace.getConfiguration('beautify').get<Object>("options");
 
 export default class Beautifier {
     public static beautify(document: vscode.TextDocument, range?: vscode.Range): any {
@@ -11,6 +11,8 @@ export default class Beautifier {
         if (!editor) {
             return;
         }
+
+        const EDITOR_TAB_SIZE = editor.options.tabSize;
 
         let start = new vscode.Position(0, 0);
         let end = new vscode.Position(document.lineCount - 1, document.lineAt(document.lineCount - 1).text.length);
@@ -23,8 +25,8 @@ export default class Beautifier {
         range = new vscode.Range(start, end);
         let originalText: string = document.getText(range);
         let formattedText: string = jsbeautify.css(originalText, Object.assign({
-            indent_size: tabSize
-        }, options));
+            indent_size: EDITOR_TAB_SIZE || DEFAULT_TAB_SIZE
+        }, OPTIONS));
 
         if (formattedText && originalText !== formattedText) {
             editor.edit(function (editor) {

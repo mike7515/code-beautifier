@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.3.0]
+> 2019-07-25
+- Tabsize from active file
+- Stability Improvements and Bugfixes.
+  
 ## [2.2.0 - 2.2.1]
 > 2019-03-25
 - Stability Improvements and Bugfixes.
