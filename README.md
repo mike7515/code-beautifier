@@ -10,7 +10,7 @@ If you beautify other languages ​​the code/text will be beautified to Visual
 
 #### Options:
 > beautify.options
-```json
+```
 {
   indent_size?: number;
   indent_char?: string;
