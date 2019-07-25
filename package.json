@@ -29,10 +29,6 @@
             "type": "object",
             "title": "Beautify css/sass/scss/less",
             "properties": {
-                "beautify.tabSize": {
-                    "type": "number",
-                    "description": "Tab Size"
-                },
                 "beautify.options": {
                     "type": "object",
                     "default": {},
