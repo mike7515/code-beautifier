@@ -54,7 +54,7 @@
     "devDependencies": {
         "typescript": "^2.9.1",
         "vscode": "^1.1.35",
-        "mocha": "^6.2.0",
+        "mocha": "^10.2.0",
         "@types/node": "^12.6.8",
         "@types/mocha": "^5.2.7",
         "@types/js-beautify": "^1.8.1"
